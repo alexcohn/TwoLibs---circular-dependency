@@ -18,5 +18,6 @@
 #define FIRST_H
 
 extern int first(int  x, int  y);
+extern int third(int  x, int  y);
 
 #endif /* FIRST_H */

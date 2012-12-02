@@ -16,12 +16,7 @@
  */
 #include "first.h"
 
-int  first(int  x, int  y)
+int third(int  x, int  y)
 {
-    return x + y;
-}
-
-int call_third(int  x, int  y)
-{
-	return third(x, y);
+	return first(x, y);
 }
