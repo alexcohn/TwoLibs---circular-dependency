@@ -29,6 +29,13 @@ LOCAL_SRC_FILES := first.c
 
 include $(BUILD_STATIC_LIBRARY)
 
+include $(CLEAR_VARS)
+
+LOCAL_MODULE    := libtwolib-third
+LOCAL_SRC_FILES := third.c
+
+include $(BUILD_STATIC_LIBRARY)
+
 # second lib, which will depend on and include the first one
 #
 include $(CLEAR_VARS)
@@ -36,6 +43,6 @@ include $(CLEAR_VARS)
 LOCAL_MODULE    := libtwolib-second
 LOCAL_SRC_FILES := second.c
 
-LOCAL_STATIC_LIBRARIES := libtwolib-first
+LOCAL_STATIC_LIBRARIES := libtwolib-first libtwolib-third
 
 include $(BUILD_SHARED_LIBRARY)
