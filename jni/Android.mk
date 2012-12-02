@@ -43,6 +43,7 @@ include $(CLEAR_VARS)
 LOCAL_MODULE    := libtwolib-second
 LOCAL_SRC_FILES := second.c
 
-LOCAL_STATIC_LIBRARIES := libtwolib-first libtwolib-third
+LOCAL_LDLIBS := -Lprebuilt -ltwolib-first -ltwolib-third
+
 
 include $(BUILD_SHARED_LIBRARY)
